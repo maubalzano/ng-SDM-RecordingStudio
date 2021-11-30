@@ -1,0 +1,11 @@
+.card{
+    background-color:transparent;
+    text-shadow:0px 0px 4px black;
+    .links{
+        bottom:0;
+        a{
+            background-image:radial-gradient(rgba(0,0,0,.7) ,transparent 80%);
+            opacity:.9
+        }
+    }
+}

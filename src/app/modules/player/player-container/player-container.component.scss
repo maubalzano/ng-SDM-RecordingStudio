@@ -1,0 +1,15 @@
+:host{
+    font-weight:200
+}
+svg{
+    position:absolute;
+    right:0
+}
+.bg-opaque{
+    background-color:rgba(0,0,0,.8) ;
+    box-shadow:0px 0px 5px #333;
+    text-shadow:0px 0px 8px #000
+}
+button{
+    max-width:30px
+}

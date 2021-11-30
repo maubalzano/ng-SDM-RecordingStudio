@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: 'runda';
+    src: url("../src/assets/font/runda-300.woff2") format("woff2"),url("../src/assets/font/runda-300.woff") format("woff"),url("https://use.typekit.net/af/c5440d/000000000000000077359c37/30/a?subset_id=2&fvd=n3&v=3") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'runda';
+    src: url("../src/assets/font/runda-400.woff2") format("woff2"),url("../src/assets/font/runda-400.woff") format("woff"),url("https://use.typekit.net/af/2e47e7/000000000000000077359bec/30/a?subset_id=2&fvd=n4&v=3") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'runda';
+    src: url("../src/assets/font/runda-500.woff2") format("woff2"),url("../src/assets/font/runda-500.woff") format("woff"),url("https://use.typekit.net/af/f78694/000000000000000077359c0d/30/a?subset_id=2&fvd=n5&v=3") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family:'runda';
+    src: url("../src/assets/font/runda-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+}
+
+
+
+@font-face {
+    font-family:"futura-pt";
+    src: url("../src/assets/font/futura-pt-400.woff2")format("woff2"),url("../src/assets/font/futura-pt-400.woff")format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+
+@font-face {
+    font-family: 'Headliner No. 45';
+    src: url("../src/assets/font/headliner.woff2") format("woff2");
+    font-style: normal
+}
+*{
+    --webkit-font-smoothing:antialiased
+}
+body{
+    font-family:'runda';
+    background-image:linear-gradient(darkslategrey, rgb(0, 130, 130));
+    background-attachment: fixed;    
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

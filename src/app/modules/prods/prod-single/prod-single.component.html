@@ -1,0 +1,17 @@
+<div class="card col-12 text-light border-light shadow-lg my-4">
+    <div class="p-3 position-relative">
+        <img class="card-img img-fluid shadow-lg rounded"[src]="prod.img">
+       
+        <div class="links d-flex justify-content-end position-absolute p-3">
+            <a class="col-3 p-2" (click)="playAudio.emit(prod.file)"><img class="img-fluid" style="filter:invert(1)" src="https://cdn-icons-png.flaticon.com/512/0/375.png"></a>
+            <a class="col-3 p-2" *ngFor="let link of prod.links" [href]="link.url">
+                <img class="img-fluid" style="filter:invert(1)" [src]="link.site">
+            </a>
+        </div>
+    </div>
+    <div class="card-body pt-0">
+        <h5>{{prod.file.author}}</h5>
+        <h6>{{prod.file.title}}</h6>
+        <p class="muted mb-0"><small>{{prod.year}}</small></p>
+    </div>
+</div>

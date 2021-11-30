@@ -1,0 +1,52 @@
+<div class="container-fluid p-0 m-0 text-center">
+    <!-- <mat-toolbar color="primary" class="main-toolbar col-12">
+      <span>Audio Player</span>
+    </mat-toolbar> -->
+    <div class="content">
+        <!-- <div class="logo">
+          <mat-icon>music_note</mat-icon>
+          <div>Audio Player</div>
+      </div> -->
+     <!--  <mat-list color="primary">
+        <h3 mat-subheader>Songs</h3> -->
+        <!-- <mat-list-item *ngFor="let file of files; let i = index" (click)="openFile(file)">
+          <mat-icon color="primary" mat-list-icon>music_note</mat-icon>
+          <h4 mat-line>{{ file.name }}</h4>
+          <h5 mat-line>by {{ file.artist }}</h5>
+          <mat-icon color="primary" *ngIf="currentFile.index === i && !state?.error">volume_up</mat-icon>
+          <h6 *ngIf="currentFile.index === i && state?.error">ERROR</h6>
+          <mat-divider></mat-divider>
+        </mat-list-item> 
+      </mat-list>-->
+    </div>
+    <div class="media-footer">
+      <div class="p-2 pt-3 p-sm-4 m-3 col-sm-6 col-md-5 bg-opaque text-light rounded-3 shadow-sm position-relative">
+        <svg (click)="onClose.emit()" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-down mx-3" viewBox="0 0 18 18">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        <mat-toolbar-row class="media-action-bar d-flex justify-content-start">
+          <!-- <button mat-button [disabled]="isFirstPlaying()" (click)="previous()">
+            <mat-icon mat-list-icon>skip_previous</mat-icon>
+          </button> -->
+          <button class="ps-0 col-1" mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing">
+            <img class="img-fluid"width="80%"  style="filter:invert(1)" src="https://cdn-icons-png.flaticon.com/512/0/375.png">
+          </button>
+          <button class="ps-0 col-1" mat-button (click)="pause()" *ngIf="state?.playing">
+            <img class="img-fluid" width="80%" style="filter:invert(1)" src="https://cdn-icons-png.flaticon.com/512/2/2914.png">
+          </button>
+          <div class="text-start">
+            <h5 class="fw-bold">{{currentFile?.author}}</h5>
+            <h6 >{{currentFile?.title}}</h6>
+          </div>
+          <!-- <button  mat-button [disabled]="isLastPlaying()" (click)="next()">
+            <mat-icon mat-list-icon>skip_next</mat-icon>
+          </button> -->
+        </mat-toolbar-row>
+        <mat-toolbar-row class="text-center d-flex justify-content-start align-items-center mx-2 mx-md-3">
+           <small>{{ state?.readableCurrentTime }}</small>
+           <mat-slider class="time-slider py-0" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile === undefined"></mat-slider>
+           <small>{{ state?.readableDuration }}</small>
+        </mat-toolbar-row>
+      </div>
+    </div>
+</div>
