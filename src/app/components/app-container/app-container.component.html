@@ -1,2 +1,5 @@
 <SDM-navbar class="position-fixed"></SDM-navbar>
-<router-outlet></router-outlet>
+<!-- <nav style="visibility:hidden" class="container-fluid"><a class="navbar-brand col-4 col-md-2" href="index.html"><img class="img-fluid" src="../../../assets/images/graphic/logo_sdm.png"></a></nav> -->
+<div [ngStyle]="{'padding-top': route != '/home' ? '56px' : '0px'}">
+    <router-outlet></router-outlet>
+</div>

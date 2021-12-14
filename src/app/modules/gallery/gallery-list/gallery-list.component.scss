@@ -1,0 +1,29 @@
+.square{
+    width:33.3%;
+    height:0;
+    padding-bottom:33.3%;
+    border:solid 4px black;
+    position:relative;
+    background-size:cover;
+    @media only screen and (min-width: 576px){
+        width: 25%;
+        padding-bottom:25%
+    }
+    @media only screen and (min-width: 768px) {
+        width: 20%;
+        padding-bottom:20%
+    }
+    @media only screen and (min-width: 992px) {
+        width: 16.6%;
+        padding-bottom:16.6%
+    }
+    @media only screen and (min-width: 1200px) {
+        width: 12.5%;
+        padding-bottom:12.5%
+    }
+}
+button{
+    border:none;
+    box-shadow:none
+}
+

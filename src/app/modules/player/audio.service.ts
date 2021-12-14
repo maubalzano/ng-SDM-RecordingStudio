@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 import * as moment from "moment";
 import { StreamState } from '../../models/stream-state'
 
@@ -139,6 +140,12 @@ export class AudioService {
 
   getState(): Observable<StreamState> {
     return this.stateChange.asObservable();
+  }
+
+  getIsPlaying(): Observable<boolean>{
+    return this.getState().pipe(
+      map(state => state.playing)
+    )
   }
 }
 

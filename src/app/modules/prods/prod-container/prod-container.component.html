@@ -1,4 +1,4 @@
 <div class="d-md-flex">
-    <SDM-prod-list (playAudio)="playAudio($event)"></SDM-prod-list>
-    <SDM-player-container *ngIf="currentFile" class="fixed-bottom shadow-sm" [currentFile]="currentFile" (onClose)="currentFile = undefined"></SDM-player-container>
+    <SDM-prod-list (playAudio)="playAudio($event)" (pause)="pause()" [currentFileTitle]="currentFile?.title" [isPlaying]="isPlaying" ></SDM-prod-list>
+    <SDM-player-container *ngIf="currentFile" class="fixed-bottom shadow-sm col-sm-6 col-md-5" [currentFile]="currentFile" (onClose)="currentFile = undefined"></SDM-player-container>
 </div>

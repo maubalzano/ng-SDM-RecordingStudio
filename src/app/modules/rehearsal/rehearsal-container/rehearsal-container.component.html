@@ -1,0 +1,8 @@
+<div class="p-3 text-light d-flex flex-column justify-content-start align-items-between flex-md-row h-100">
+    <img class="img-fluid rehearsal-img rounded-3 col-12" srcset='../../../../assets/images/gallery/sala.webp 1000w,../../../../assets/images/gallery/sala_m.webp 100w'sizes='(max-width:600px) 100px, 1000px'src="../../../../assets/images/gallery/sala.webp">
+    <div class="col-12 item-list rounded d-flex flex-column flex-md-row flex-md-wrap  justify-content-center m-md-0 h-100 position-relative" >
+        <div *ngFor="let item of items" class="my-4 item-container shadow-lg p-3 rounded col-md-3 mx-md-3 h-25">
+            <SDM-rh-item [item]="item"></SDM-rh-item>
+        </div>
+    </div>
+</div>

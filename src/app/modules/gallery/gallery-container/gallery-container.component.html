@@ -1,0 +1,4 @@
+<div>
+    <SDM-gallery-list [images]="images" (selectImg)="selectImg($event)"></SDM-gallery-list>
+    <SDM-gallery-fullscreen *ngIf="selectedImage" [currentImage]="selectedImage" (onClose)="unselectImg()" (next)="nextImg()" (previous)="previousImg()"></SDM-gallery-fullscreen>
+</div>

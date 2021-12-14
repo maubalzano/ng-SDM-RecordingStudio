@@ -1,0 +1,5 @@
+<div class="container-fluid m-0 p-0 d-flex justify-content-center p-sm-5">
+    <div class="d-flex flex-wrap col-12 p-1 bg-black">
+        <button *ngFor="let image of images" class="square" [ngStyle]="{'background-image': 'url('+ image.src + ')'}" (click)="selectImg.emit(image)"></button>
+    </div>
+</div>

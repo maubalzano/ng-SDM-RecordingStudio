@@ -9,7 +9,10 @@ import { File } from 'src/app/models/file';
 })
 export class ProdSingleComponent implements OnInit {
   @Input() prod!: Prod;
+  @Input() currentFileTitle?: string;
+  @Input() isPlaying!: boolean;
   @Output() playAudio = new EventEmitter<File>();
+  @Output() pause = new EventEmitter();
   
   constructor() { }
 

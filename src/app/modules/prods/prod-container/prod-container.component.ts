@@ -33,6 +33,8 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class ProdContainerComponent implements OnInit {
   currentFile?: File;  
+  isPlaying!: boolean;
+
   constructor(public audioService: AudioService) { }
   
   playAudio(file: File) {
@@ -41,7 +43,13 @@ export class ProdContainerComponent implements OnInit {
 
     });
   }
+
+  pause(){
+    this.audioService.pause()
+  }
+
   ngOnInit(): void {
+    this.audioService.getIsPlaying().subscribe(isPlaying => this.isPlaying = isPlaying)
   }
 
 }

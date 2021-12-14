@@ -8,6 +8,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { AppContainerComponent } from './components/app-container/app-container.component';
 import { HomeModule } from './modules/home/home.module';
 import { ProdsModule } from './modules/prods/prods.module';
+import { GalleryModule } from './modules/gallery/gallery.module';
+import { RehearsalModule } from './modules/rehearsal/rehearsal.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProdsModule } from './modules/prods/prods.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeModule,
-    ProdsModule
+    ProdsModule,
+    GalleryModule,
+    RehearsalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

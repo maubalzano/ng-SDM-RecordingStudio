@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { File } from 'src/app/models/file';
 import { Prod } from 'src/app/models/prod';
 import { productions } from '../../../../assets/productions';
@@ -9,8 +9,13 @@ import { productions } from '../../../../assets/productions';
   styleUrls: ['./prod-list.component.scss']
 })
 export class ProdListComponent implements OnInit {
-  prods: Prod[] = productions;
+  
+  @Input() currentFileTitle?: string;
+  @Input() isPlaying!: boolean;
   @Output() playAudio = new EventEmitter<File>();
+  @Output() pause = new EventEmitter();
+  
+  prods: Prod[] = productions;
 
   constructor() { }
 

@@ -1,0 +1,20 @@
+button{
+    position:absolute;
+    padding-top:0;
+    padding-right:0;
+    top:0;
+    right:0;
+    &:focus{
+        box-shadow:none
+    };
+    svg{
+        transition:.2s
+    }
+}
+.rotate180{
+    transform:rotate(+180deg);
+    transition:.2s
+}
+h5{
+    letter-spacing:.05em
+}

@@ -1,7 +1,19 @@
 :host{
+    width:100%;
     z-index:3
 }
 .bg-black{
     background-color:black;
     box-shadow:0px 2px 10px #333
+}
+.sdm{
+    width:120px;
+    @media screen and (min-width: 576px){
+        width:140px
+    }
+
+}
+.toggle-btn{
+    background-color:transparent;
+    border:none
 }
